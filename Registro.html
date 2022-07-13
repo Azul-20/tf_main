@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Registro</title>
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <a class="logo-m" href="index.html"><img class="logo" src="img/Logo.png"></a>
+            <nav>
+                <ul class="sub-nav">
+                    <li class="list"><a class="link" href="index.html">Inicio</a></li>
+                    <li class="list"><a class="link" href="Somos.html">Quienes Somos</a>
+                        <ul class="sub-m">
+                            <li class="list"><a class="link-in" href="Ubicación.html">Ubicación</a></li>
+                            <li class="list"><a class="link-in" href="Primaria.html">Primaria</a></li>
+                            <li class="list"><a class="link-in" href="Secundaria.html">Secundaria</a></li>
+                        </ul>
+                    </li>
+                    <li class="list"><a class="link" href="Registro.html">Registro de notas</a></li>
+                    <li class="list"><a class="link" href="Mision.html">Misión</a>
+                        <ul class="sub-m">
+                            <li class="list"><a class="link-in" href="Vision.html">Visión</a></li>
+                            <li class="list"><a class="link-in" href="Noticias.html">Noticias Actuales</a></li>
+                            <li class="list"><a class="link-in" href="Informacion.html">Información Adicional</a></li>
+                        </ul>
+                    </li>
+                    <li class="list"><a class="link" href="Calculadora.html">Calculadora Escolar</a></li>
+                    <li class="list"><a class="link" href="Contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container-1">
+        <h2>Bienvenido al registro de notas</h2><br>
+        <p>Aquí podrás promediar las notas obtenidas de las cinco prácticas obtenidas durante el año:</p><br>
+        <form class="register">
+            <div class="section">
+                <div class="input-1">
+                    <span class="sub-title-2">Nota 1</span>
+                    <input class="box" type="text" id="nota1">
+                </div>
+                <div class="input-1">
+                    <span class="sub-title-2" >Nota 2</span>
+                    <input class="box" type="text" id="nota2">
+                </div>
+                <div class="input-1">
+                    <span class="sub-title-2" >Nota 3</span>
+                    <input class="box" type="text" id="nota3">
+                </div>
+                <div class="input-1">
+                    <span class="sub-title-2" >Nota 4</span>
+                    <input class="box" type="text" id="nota4">
+                </div>
+                <div class="input-1">
+                    <span class="sub-title-2" >Nota 5</span>
+                    <input class="box" type="text" id="nota5">
+                </div>
+            </div>
+            <script>
+                function calcular(){
+                    var n1 = parseFloat(document.getElementById('nota1').value);
+                    var n2 = parseFloat(document.getElementById('nota2').value);
+                    var n3 = parseFloat(document.getElementById('nota3').value);
+                    var n4 = parseFloat(document.getElementById('nota4').value);
+                    var n5 = parseFloat(document.getElementById('nota5').value);
+                    var p = (n1+n2+n3+n4+n5)/5;
+                    document.getElementById('promedio').value=p.toFixed(2);
+                    if (p<12) {var cond = 'Desaprobado';}
+                    else {var cond = 'Aprobado';}
+                    document.getElementById('estado').value=cond;}
+            </script>
+        </form>
+        <button class="btn" onclick="calcular()">Enviar</button>
+        <div class="section">
+            <div class="input-2">
+                <span class="sub-title-2">Promedio:</p></span>
+                <input class="box" type="text" id="promedio">
+            </div>
+            <div class="input-2">
+                <span class="sub-title-2" >Estado:</span>
+                <input class="box" type="text" id="estado">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

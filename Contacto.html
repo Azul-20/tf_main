@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Contactos</title>
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <a class="logo-m" href="index.html"><img class="logo" src="img/Logo.png"></a>
+            <nav>
+                <ul class="sub-nav">
+                    <li class="list"><a class="link" href="index.html">Inicio</a></li>
+                    <li class="list"><a class="link" href="Somos.html">Quienes Somos</a>
+                        <ul class="sub-m">
+                            <li class="list"><a class="link-in" href="Ubicación.html">Ubicación</a></li>
+                            <li class="list"><a class="link-in" href="Primaria.html">Primaria</a></li>
+                            <li class="list"><a class="link-in" href="Secundaria.html">Secundaria</a></li>
+                        </ul>
+                    </li>
+                    <li class="list"><a class="link" href="Registro.html">Registro de notas</a></li>
+                    <li class="list"><a class="link" href="Mision.html">Misión</a>
+                        <ul class="sub-m">
+                            <li class="list"><a class="link-in" href="Vision.html">Visión</a></li>
+                            <li class="list"><a class="link-in" href="Noticias.html">Noticias Actuales</a></li>
+                            <li class="list"><a class="link-in" href="Informacion.html">Información Adicional</a></li>
+                        </ul>
+                    </li>
+                    <li class="list"><a class="link" href="Calculadora.html">Calculadora Escolar</a></li>
+                    <li class="list"><a class="link" href="Contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container-4">
+        <div class="container-5">
+            <div class="info">
+                <h3 class="title">Info. de Contacto</h3><br><br>
+                <div class="infbox">
+                    <h4 class="sub-title-1">Contacto 1</h4><br>
+                    <a class="link-none" href="Correo: contacto1@gmail.com">contacto1@gmail.com</a>
+                    <a class="link-none" href="Número: 965 485 154">965 485 154</a>
+                </div><br><br>
+                <div class="infbox">
+                    <h4 class="sub-title-1">Contacto 2</h4><br>
+                    <a class="link-none" href="Correo: contacto2@gmail.com">contacto2@gmail.com</a>
+                    <a class="link-none" href="Número: 981 225 130">981 225 130</a>
+                </div><br><br>
+                <div class="infbox">
+                    <h4 class="sub-title-1">Contacto 3</h4><br>
+                    <a class="link-none" href="Correo: contacto3@gmail.com">contacto3@gmail.com</a>
+                    <a class="link-none" href="Número: 987 512 111">987 512 111</a>
+                </div><br><br>
+                <div class="infbox">
+                    <h4 class="sub-title-1">Contacto 4</h4><br>
+                    <a class="link-none" href="Correo: contacto4@gmail.com">contacto4@gmail.com</a>
+                    <a class="link-none" href="Número: 923 001 452">923 001 452</a>
+                </div><br><br>
+            </div>
+            <div class="form">
+                <h3 class="title">Escríbenos</h3><br><br>
+                <form>
+                    <div class="input">
+                        <span class="sub-title-2">Nombre</p></span>
+                        <input class="box" type="text" placeholder="Carlos" id="firstname">
+                    </div>
+                    <div class="input">
+                        <span class="sub-title-2">Apellido</span>
+                        <input class="box" type="text" placeholder="Perez" id="lastname">
+                    </div>
+                    <div class="input">
+                        <span class="sub-title-2">E-mail</span>
+                        <input class="box" type="text" placeholder="carlosperez@gmail.com" id="email">
+                    </div>
+                    <div class="input">
+                        <span class="sub-title-2">Número</span>
+                        <input class="box" type="text" placeholder="986 153 124" id="number">
+                    </div>
+                    <div class="input" id="text">
+                        <span class="sub-title-2">Mensaje</span>
+                        <textarea placeholder="Escribe tu mensaje aquí ..." id="message"></textarea>
+                    </div>
+                </form>
+                <div class="send">
+                    <input class="btn" type="submit" onclick="save()">
+                </div><br>
+                <div class="save">
+                    <div class="row-1">
+                        <div class="mid">
+                            <input class="out" type="text" id="n">
+                        </div>
+                        <div class="mid">
+                            <input class="out" type="text" id="l">
+                        </div>
+                        <div class="mid">
+                            <input class="out" type="text" id="e">
+                        </div>
+                        <div class="mid">
+                            <input class="out" type="text" id="nu">
+                        </div>
+                    </div>
+                    <div class="line">
+                        <input class="out" type="text" id="m">
+                    </div><br>
+                    <div class="send">
+                        <a href="Contacto.html"><button class="btn" onclick="alerta()">Confirmar</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script> 
+    function save()
+    {
+        let nombre = document.getElementById('firstname').value;
+        document.getElementById('n').value=nombre;
+        let lastname = document.getElementById('lastname').value;
+        document.getElementById('l').value=lastname;
+        let email = document.getElementById('email').value;
+        document.getElementById('e').value=email;
+        let number = document.getElementById('number').value;
+        document.getElementById('nu').value=number;
+        let message = document.getElementById('message').value;
+        document.getElementById('m').value=message;
+    }
+    </script>
+
+    <script>
+    function alerta()
+    {
+        alert('Agradecemos su interés por su envío y contactarnos, responderemos a su mensaje en la brevedad a los siguientes contactos guardados.');
+    }
+    </script>
+
+</body>
+</html>
